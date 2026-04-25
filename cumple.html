@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Jojany Orellana</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="hero">
+        <img src="portada.jpeg" alt="Jojany" class="hero-img">
+        <div class="hero-content">
+            <h2 class="pre-title">ESTÁS INVITADO A MIS </h2>
+            <h1 class="age">15 + 1</h1>
+            <h2 class="name-script">Jojany Orellana Soto</h2>
+        </div>
+    </section>
+
+    <main class="main-content">
+        
+        <section class="countdown-container">
+            <h2 class="gold-text-title">FALTAN</h2>
+            <div id="countdown">
+                <div class="time-block"><span id="days">00</span><small>Días</small></div>
+                <div class="time-block"><span id="hours">00</span><small>Hrs</small></div>
+                <div class="time-block"><span id="mins">00</span><small>Min</small></div>
+                <div class="time-block"><span id="secs">00</span><small>Seg</small></div>
+            </div>
+        </section>
+
+        <div class="elegant-divider"></div>
+
+        <section class="event-details">
+            <div class="datetime">
+                <h2 class="gold-text">Jueves, 30 de Abril</h2>
+                <h2 class="wine-text-heavy">19:30 HORAS</h2>
+            </div>
+            <H1>LUGAR</H1>
+            <h3 class="gold-text">Sede de los Saipineños Indomables</h3>
+            <p class="wine-text-small">(Casa de Tio Jinder)</p>
+            <p class="gold-text-small">Santa Cruz de la Sierra</p>
+        </section>
+
+        <section class="map-section">
+            <div class="map-wrapper">
+                <h3 class="gold-text-subtitle">UBICACIÓN DEL EVENTO</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5449.292829281587!2d-63.1544164!3d-17.8530546!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e9002748ca7f%3A0x5021b3d067fb00d9!2sSede%20de%20los%20Saipine%C3%B1os%20Indomables!5e1!3m2!1ses-419!2sbo!4v1777153072181!5m2!1ses-419!2sbo" 
+                        width="100%" 
+                        height="350" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/13eBYhhqvZtNEn7P9" target="_blank" class="btn-maps-pink">
+                    ABRIR UBICACIÓN
+                </a>
+            </div>
+        </section>
+
+        <section class="special-mentions-box">
+            <h2 class="script-title-gold">Menciones Especiales</h2>
+            
+            <div class="family-grid">
+                <div class="mention-card">
+                    <h4 class="category-title">Mis Padres</h4>
+                    <div class="person">
+                        <p class="name-wine-bold">Osmar Orellana</p>
+                        <p class="phrase-dark">"Tu luz sigue brillando en mi corazón y desde el cielo guías mis pasos."</p>
+                    </div>
+                    <div class="person">
+                        <p class="name-wine-bold">Juan Carlos Lazo</p>
+                        <p class="label-gold">Papá que la vida me dio</p>
+                    </div>
+                    <div class="person">
+                        <p class="name-wine-bold">Yolanda Soto Flores</p>
+                        <p class="label-gold">Mi amada Madre</p>
+                    </div>
+                    <div class="photo-container">
+                        <img src="family.jpeg" alt="Familia" class="card-img">
+                    </div>
+                </div>
+
+                <div class="mention-card">
+                    <h4 class="category-title">Mis Hermanas</h4>
+                    <div class="person"><p class="name-wine-bold">Juledi Orellana</p></div>
+                    <div class="person"><p class="name-wine-bold">Jhosselin Soto</p></div>
+                    <div class="photo-container">
+                        <img src="hermanaS.jpeg" alt="Hermanas" class="card-img">
+                    </div>
+                </div>
+            </div>
+
+            <section class="final-invitation-text">
+    <p class="sparkle-text">✨ ¡Prepara tu mejor energía! ✨</p>
+    <p class="dress-code-msg">
+        No olvides venir con todas las ganas de divertirte y disfrutar al máximo. 
+        <br><br>
+        <strong>Vestimenta:</strong> Formal y cómoda, 
+        <span class="wine-highlight">¡porque bailaremos hasta el amanecer!</span> 
+</section>
+
+<footer class="footer-actions">
+    <a href="https://wa.me/59177163600?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20cumple%20de%20Jojany" class="btn-wine-shiny pulse-animation">
+        CONFIRMAR ASISTENCIA ❤
+    </a>
+            </footer>
+        </section>
+        <p class="rights-text">DERECHOS RESERVADOS JHOSSELIN SOTO 2026</p>
+    </main>
+
+    <script>
+        const eventDate = new Date("April 30, 2026 19:30:00").getTime();
+        setInterval(function() {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+            document.getElementById("days").innerHTML = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+            document.getElementById("hours").innerHTML = Math.max(0, Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+            document.getElementById("mins").innerHTML = Math.max(0, Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+            document.getElementById("secs").innerHTML = Math.max(0, Math.floor((diff % (1000 * 60)) / 1000));
+        }, 1000);
+    </script>
+</body>
+</html>

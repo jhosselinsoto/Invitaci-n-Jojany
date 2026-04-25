@@ -1,0 +1,337 @@
+:root {
+    --gold: #d4af37;
+    --wine: #a8002a;
+    --wine-bright: #9b0727;
+    --black: #0a0002;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* HERO CENTRADO PERFECTO */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.pre-title {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold);
+    letter-spacing: 4px; /* Reducimos un poco el espacio entre letras para que se vea más compacto */
+    font-size: 22px;     /* Aumentamos el tamaño (antes era 14px o 18px) */
+    font-weight: 900;    /* Grosor máximo para que sea muy legible */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: -10px; /* VALOR CLAVE: Margen negativo para pegarlo al 15+1 */
+    text-transform: uppercase;
+}
+
+.age {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 110px; 
+    color: var(--gold); /* Un solo color sólido */
+    margin: 0; 
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
+    /* Eliminamos el background-clip y el text-fill-color para que el color sólido funcione */
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+.name-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.8rem;
+    color: var(--gold);
+    text-shadow: 2px 2px 10px black;
+}
+
+/* CONTADOR CUADRADITOS */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.time-block {
+    background: rgba(168, 0, 42, 0.2);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 15px 5px;
+    min-width: 75px;
+}
+
+.time-block span {
+    font-size: 28px;
+    font-weight: 900;
+    display: block;
+}
+
+.time-block small {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #f5f5f5;
+}
+
+/* RECUADRO DE MENCIONES (CAJÓN) */
+.special-mentions-box {
+    width: 92%;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px 15px;
+    border: 3px solid var(--gold);
+    border-radius: 30px;
+    background: linear-gradient(145deg, #0f0003, #1a0005);
+}
+
+/* IMÁGENES AJUSTADAS */
+.photo-container {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* TEXTOS VINO GRUESOS */
+.name-wine-bold {
+    color: var(--wine-bright) !important;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 15px 0 5px 0;
+    text-shadow: 1px 1px 2px black;
+}
+
+.wine-text-heavy {
+    color: var(--wine-bright);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.category-title {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.label-gold { color: var(--gold); font-style: italic; font-size: 0.9rem; font-weight: bold; }
+.phrase-dark { color: #aaa; font-style: italic; margin-bottom: 15px; font-weight: 600; }
+
+/* MAPA */
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+}
+
+.btn-maps-pink {
+    display: inline-block;
+    background: var(--wine);
+    color: rgb(10, 10, 10);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 900;
+    margin-top: -20px;
+    position: relative;
+    border: 1px solid var(--gold);
+}
+
+/* BOTÓN FINAL */
+.btn-wine-shiny {
+    background: linear-gradient(45deg, #4a0012, var(--wine), #4a0012);
+    color: rgb(255, 230, 8);
+    padding: 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    display: block;
+    border: 2px solid var(--gold);
+    margin-top: 20px;
+}
+
+.rights-text {
+    font-size: 10px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+
+
+/* AJUSTES MÓVILES EXTRAS */
+@media (max-width: 480px) {
+    .time-block { min-width: 65px; padding: 10px 5px; }
+    .hero-text-bottom { padding-bottom: 0; }
+}
+/* ANIMACIÓN DE ENTRADA (FADE IN UP) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicamos la animación a las secciones principales */
+.hero-content, .countdown-container, .event-details, .map-section, .mention-card {
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* ANIMACIÓN DE PULSO PARA EL BOTÓN */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* ESTILO DEL NUEVO MENSAJE */
+.final-invitation-text {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.sparkle-text {
+    color: var(--gold);
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.dress-code-msg {
+    color: #eee;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.wine-highlight {
+    color: var(--wine-bright);
+    font-weight: 900;
+    display: block;
+    margin-top: 5px;
+}
+
+/* AJUSTE PARA LAS LETRAS VINO EN TARJETAS */
+.name-wine-bold {
+    /* Reforzamos lo que pediste: gruesas y legibles */
+    color: var(--wine-bright) !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px;
+}
+/* --- ANIMACIONES ADICIONALES SIN MODIFICAR LO ANTERIOR --- */
+
+/* 1. Animación de zoom suave para la imagen de fondo */
+.hero-img {
+    animation: slowZoom 10s infinite alternate ease-in-out;
+}
+
+@keyframes slowZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* 2. Animación de brillo para el texto dorado (15+1) */
+.age {
+    animation: goldShimmer 3s infinite alternate ease-in-out;
+}
+
+@keyframes goldShimmer {
+    0% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5)) brightness(1); }
+    100% { filter: drop-shadow(0 0 25px rgba(253, 228, 2, 0.8)) brightness(1.2); }
+}
+
+/* 3. Escalonamiento de aparición (Delays) */
+/* Esto hace que las cosas aparezcan en orden y no de golpe */
+
+.hero-content .pre-title { 
+    animation: fadeInUp 1s ease-out forwards; 
+    animation-delay: 0.2s; 
+    opacity: 0; 
+}
+
+.hero-content .age { 
+    animation: fadeInUp 1s ease-out forwards; 
+    animation-delay: 0.5s; 
+    opacity: 0; 
+}
+
+.hero-content .name-script { 
+    animation: fadeInUp 1s ease-out forwards; 
+    animation-delay: 0.8s; 
+    opacity: 0; 
+}
+
+/* Animación para los cuadritos del contador */
+.time-block {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.time-block:nth-child(1) { animation-delay: 1s; }
+.time-block:nth-child(2) { animation-delay: 1.2s; }
+.time-block:nth-child(3) { animation-delay: 1.4s; }
+.time-block:nth-child(4) { animation-delay: 1.6s; }
+
+/* Animación para las tarjetas de menciones */
+.mention-card {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.mention-card:nth-child(1) { animation-delay: 0.3s; }
+.mention-card:nth-child(2) { animation-delay: 0.6s; }
+
+/* Hacemos que el botón siempre tenga la animación de pulso que ya tenías */
+.btn-wine-shiny {
+    animation: pulse 2s infinite;
+}
